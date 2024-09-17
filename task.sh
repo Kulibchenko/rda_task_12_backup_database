@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mysqldump -u $DB_USER -p$DB_PASSWORD --databases ShopDB --result-file=ShopDB_backup.sql;
+mysqldump -u $DB_USER -p$DB_PASSWORD ShopDB --result-file=ShopDB_backup.sql;
 
 mysql -u $DB_USER -p$DB_PASSWORD  ShopDBReserve < ShopDB_backup.sql;
 
